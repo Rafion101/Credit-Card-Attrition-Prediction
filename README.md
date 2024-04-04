@@ -5,7 +5,7 @@
 
 # Introduction
 
-The goal of this project is to analyze a New York Airbnb dataset (from kagle) with the aim to create a marketing campaign and analyze potential revenue we can gain from it. The project involves data analysis using visualization, descriptive, and inferential statistics to gain insights from the dataset. The project follows a structured framework encompassing background, problem formulation, and 'SMART' business understanding to stay on the right trajectory to achieve its goals.
+This project aims to develop a predictive model to identifying credit card users that has a potential to churn/attrition. By analyzing customer behavior, the goal is to create a reliable tool that can assist the marketing team in mitifating potential attrition by creating prevention strategies. With accurate predictions, we can create a more effective targeted marketing. In this project, various classification algorithm will be evaluated to find the best model for the dataset
 
 ---
 
@@ -13,89 +13,112 @@ The goal of this project is to analyze a New York Airbnb dataset (from kagle) wi
 
 ## Case Study:
 
-It is January 2022 we are tasked to asist Airbnb to find suitible host in New York and to market them to potential visitors looking for a place to stay. due to COVID-19 outbreak in early 2020 there has been a huge decresee in revenue from 30% to 10% and numbers of booking as well as host leaving the platform. 
+In this Scenario I am a data scientist working in SBank where safety and satisfaction is guaranteed (Made up bank). Our bank prioritize customer satisfaction by looking at the customer retention and customer churn rate. We can see from the data gather last year which is 2023 that there are some customers that has churned.
 
-After COVID-19 subsided in the year 2022 airbnb wants to increase thier revenue by at least 20% due to the decrease in numbers of booking from the last few years, by marketing potential host and marketing potential visitors to use airbnb as their platform to find a temporary stay in new york in the hopes to increase revenue and an increase of number of booking, while also competing against other simmilar companies wanting to gain new host in new york.
-
-Note:
-- revenue is currenltly low of 10 %.
-
-## S.M.A.R.T
-
-Based on the problem statement above we want to find good potential host in new york based on the desity of turist/people looking for a temporary place to stay in new york to <b>increase revenue and increase numbers of host and guest in airbnb roster.</b>
-
-### Specific:
-To find good potential host in new york based on the desity of turist/people looking for a temporary place to stay in new york to <b>increase revenue and increase amount host and visitors in 2022</b>
-
-### Measure: 
-increase revenue by 20% as well as increasing the amount of host and visitors by up to 20% (total booking)
-
-reason why 20% is chosen is because that is the ideal revenue percentage to reach and booking percentage is increased by 20% which is a reasonable increase from the currently low percentage.
-
-### Achivable:
-To Achive the Speific goal with the measure above we have to :
-
-- Analyze the market trend from past data, in new york city.
-
-- Pin pointing visitor intrest in which time and part of new york they tend to stay.
-
-- finding the corelation between the price and the location of the stay.
-
-### Relevant:
-Based on the achivable list each list are relevant to reaching our specific goals:
-
-- If we are able to analyze the market trend we can find insight in marketing our platform.
-
-- If we can find out on which month and which area the visitor tend to stay, we can market our platform to potential host in that area in the year 2022 and that month in 2022.
-
-- if we can find out the corelation between price and the location of the stay we can see area that are profittable to market out platform.
-
-### Time-Bound:
-The goal is set to for the nect 4 months:
-
-- 1 month will be to analyze the data that we have gathered.
-- 1.5 month will be used to create an ad campaign for potential host and potential visitors.
-- 1 month will be used to execute the project.
-- 2 weeks to analyze the result after on month of execution
-
-### Problem Statement:
-To improve revenue by 20% and increase our host and visitors by up to 20% (total booking) within 4 months, by increasing numbers of host and visitors by marketing potential host in that area and time and marketing them on our platform to potential visitors.
+I am tasked by Sbank to analyze and predict potential customers that might/already left in order for Sbank marketing team, product team and sales team to mitigate a potential attrition of our users. With the goal to lower customer churn by 5%.
 
 ---
 
 # Data Cleaning and Preprocessing
 
-The raw data was cleaned to ensure it is appropriate for statistical measurements. This involved adjusting data types and removing rows with missing values as well as outlier handling based on skewness and kurtosis analysis.
+The raw data was cleaned to ensure it is appropriate for statistical measurements. This involved adjusting data types and removing rows with missing values as well feature engineering from creation to selection and further scaling and encoding to be done before modeling.
 
 ---
 
 # Data Analysis and Insights
 
-Based on the analysis above we can gather that.
+Based on the EDA we can gather that :
 
-- The area with the most potential for marketing to potential host is the Manhattan and Brooklyn due to the fact it has the highest price.
+- Attrition :
+  - There are more users that still use our credit card compared to attrited customers.
 
-- Based on the month distribution we can see that June is the most popular month people book rooms in air bnb, we can market visitors for that specific month.
-
-- Since entire house/apartments are the more popular we can market potential visitors to the area of manhattan/Brooklyn with entire house/apartments host.
-
-- based on the distribution of neighborhood groups manhattan has the highest number of listing, Manhattan is the most popular, although we can also opt for Brooklyn to take initiative for to find potential host there because it seems to be growing in popularity, which we can plan a marketing strategy based on that.
-
-- we can see based on the distribution of price most host tend to price their rooms around 60 - 69 USD so we can set out price range in order to attract more potential visitors.
-
-- based on the anova test we can gather that there is a big difference between the price and the locations, although Brooklyn has the most number of host, manhattan has the highest price. the ANOVA test can also be seen by the tree map, where the smallest weight being Stanen Island being the cheapest place. but it also has the most reviews although we cannot determind if it is positive or negative, we can assume it is not a good potential marketing area to find potential host. <b>on the other hand we can also focus on building a a potential good area in staten island in the future, becuase currently we are not in the situation to do so we will save that option for later</b>
-
-- Key point in the data:
-
-  - Manhattan is the best place to market with the highest price.
-  - Brooklyn is the most dense area with many potential host and a growing popularity, we can also market our service to Brooklyn.
-  - June being the most popular time to stay in New York we could mareket to the visitors a month before.
-  - We can also focus on building a a potential good area in staten island for future projects.
+  - around 16.1% of users that are attrited compared to the 83.9% that are with us.
   
+  - Data is proved to be imbalanced.
+
+- Age :
+  - Age is normally distributed, with the most users being aroung 48 years old and the least being above 60.
+
+  - Majority of users are still using our service, around 16% - 25% of each age group are attributed.
+
+  Bussines Insight: 
+  - We can provide financial stability anfd planning, people at the age of 40 to 50 usualy prioritize financial stability and planning become more important  thus we can provide them with the necessary assistance.
+
+  - Long term reward benefits can be given to users that has been with as for a long period of time which can reduce potential churn rate.
+
+- Dependancy Count : 
+
+  Dependant_Count refers to the number of people who are financialy dependant to the user (example a father with two kids has a dependant count of 2 or 3 ( 3 if the wife is included)).
+
+  Based in the graph abive we can say that :
+
+  - Majority of your users has a dependancy of around 2 or 3 people and the least being 5 dependence count.
+  - Majority of users are still using our service, around 16% - 25% of each dependence group are attributed/churn
+
+  Bussiness Insight :
+  
+  - We can provide family oriented services towards users that has a dependancy of 1 or higher like a joint accoutn to reduce churn rate
+  - A reward program that i family oriented like educational resources, financial planning tools, ect.
+
+- Inactivity within 12 Months : 
+
+  - users are still in contact with use around 2 - 3 months with the highest being 3 months
+  - there are almost no users around 1 which means that they are still in contact with us on after the frist month.
+  - around 3 moths the attrition is at it's highest at 8.2%.
+
+- Contact with bank within 12 Months : 
+
+  - users are still in contact with use around 2 - 3 months with the highest being 2 months
+  - there are no users around 6 and later months.
+  - around 3 moths the attrition is at it's highest at 6.7%.
+
+Bussines insght:
+  - users contact banks to seek result/answer regarding our credit cards, we can increase ourr customer services in order to lower customer churn.
+
+-  Months on Book :
+
+  - most users has been with us for over 30 months (more than 2 -3 years).
+  - Attrition is higer around the months of 30 to 39.
+
+Bussines Insight:
+
+  - the same as the age we can give long term users award based on how long they gav been with us.
+  - Financialy consulting for long term users.
+
+- Gender : 
+
+  - There are 3.8 more females than there are male.
+  - both gender are quite evenly distributed with females having a higher attrition comapred to males by 1.2%.
+
+- Education Level : 
+
+  - Majority of users are around high school, graduate, and uneducated with the most being graduate.
+  - majority of our users makes less then 40K.
+  - Unknown catagory will be randomly imputated during missing value handling.
+
+  Bussiness Insight:
+  
+  - We cam give give financial counceling to high school and uneducated users so they can be more financially stable and lower churn rate.
+
+- Income Catagory : 
+
+  - majority of our users makes less then 40K.
+  - Unknown catagory will be randomly imputated during missing value handling.
+  - arounf 2 to 6 % of each demograpich attributed/churn
+
+Bussiness Insight:
+
+  - We cam give give financial counceling to those that make less than 40K.
+  - we can give some leniency for user that make less than 60K to pay of their credit card.  
 
 ---
+# Conclusion
 
-# Tableu Dashboard Link
+Based on the comperhensive exploratory data analysis (EDA) and model evaluation, it is evident that **Boosting after hpyerparamter tunning emerges as the most optimal choice to predict attired users in the given dataset.** The EDA insight shows some insight regarding our demographic and their activity of 12 months of this data has been collected which can give as a lot of bussiness insight. Such as giving reward system that base on how active and how long they have been using our services as well as giving financial consultinh towards those that has low income and a lot of depeneces.
 
-LINK Tableu:
-https://public.tableau.com/app/profile/irsyad.rafif/viz/Milestone1_17073802602180/AirbnbMilestone?publish=yes
+Regarding the model that shows the best which os boosting after conducting hyperparameter tuning, we can see the recall difference between tran and test of 12% although it is higher we can see a more significant decreese in the false negative value on the confusion matrix and an increase in stability on the cross validation. Moving forward, ufrther experimentation could be done by either increasing the numbers of features and hyperparameter tuning using grid search instead of randomsearchCV, alternatif model evaluation and feature selection using other means than correlation and feature of importance such as the feature selection liblary.
+
+# Deployment Link
+
+Deployment Link:
+https://huggingface.co/spaces/Rafion101/Milestone_2
