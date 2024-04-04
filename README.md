@@ -1,239 +1,101 @@
-## Milestone 2 hugging Face URL : https://huggingface.co/spaces/Rafion101/Milestone_2
-
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/nsQIUhZ2)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14161361&assignment_repo_type=AssignmentRepo)
-# Phase 1 Milestone 2
-
-_Milestone 2 ini dibuat guna mengevaluasi pembelajaran pada Hacktiv8 Data Science Fulltime Program khususnya pada Phase 1._
+# Credit Card Attrition Prediction
 
 ---
 
-## Assignment Objectives
 
-Milestone 2 ini dibuat guna mengevaluasi konsep Machine Learning pada pembelajaran Phase 1 sebagai berikut:
+# Introduction
 
-- Mampu memahami konsep Machine Learning secara keseluruhan.
-- Mampu mempersiapkan data untuk digunakan dalam model Supervised Learning (Classification atau Regression).
-- Mampu mengimplementasikan Supervised Learning (Classification atau Regression) dengan data yang dipilih.
-- Mampu melakukan Hyperparameter Tuning dan Model Improvement.
-- Mampu melakukan Model Deployment.
+The goal of this project is to analyze a New York Airbnb dataset (from kagle) with the aim to create a marketing campaign and analyze potential revenue we can gain from it. The project involves data analysis using visualization, descriptive, and inferential statistics to gain insights from the dataset. The project follows a structured framework encompassing background, problem formulation, and 'SMART' business understanding to stay on the right trajectory to achieve its goals.
 
 ---
 
-## Topik
+# Problem Identification
 
-Anda dipersilakan untuk memilih salah satu topik mengenai Supervised Learning : Regression atau Classification.
+## Case Study:
 
----
+It is January 2022 we are tasked to asist Airbnb to find suitible host in New York and to market them to potential visitors looking for a place to stay. due to COVID-19 outbreak in early 2020 there has been a huge decresee in revenue from 30% to 10% and numbers of booking as well as host leaving the platform. 
 
-## Dataset
+After COVID-19 subsided in the year 2022 airbnb wants to increase thier revenue by at least 20% due to the decrease in numbers of booking from the last few years, by marketing potential host and marketing potential visitors to use airbnb as their platform to find a temporary stay in new york in the hopes to increase revenue and an increase of number of booking, while also competing against other simmilar companies wanting to gain new host in new york.
 
-### Ketentuan Dataset
-1. Pilihlah dataset yang paling nyaman digunakan karena tidak ada batasan untuk memilih dataset dalam mengerjakan Milestone 2. 
+Note:
+- revenue is currenltly low of 10 %.
 
-2. **Konsultasikan terlebih dahulu dataset yang hendak digunakan ke buddy masing-masing student. Jika disetujui, maka silakan dikerjakan. Jika tidak disetujui, maka cari dataset yang lain dan konsultasikan lagi mengenai dataset yang baru ini.**
+## S.M.A.R.T
 
-3. Student tidak boleh menggunakan dataset yang sudah dipakai dalam tugas Live Code, Graded Challenge, Non Graded Challenge, dan Milestone dari Phase 0 hingga Phase 1.
+Based on the problem statement above we want to find good potential host in new york based on the desity of turist/people looking for a temporary place to stay in new york to <b>increase revenue and increase numbers of host and guest in airbnb roster.</b>
 
-4. Student juga tidak boleh menggunakan dataset yang sudah dipakai dalam sesi pembelajaran saat dikelas bersama instruktur. Carilah dataset yang baru untuk tugas Milestone 2 ini.
+### Specific:
+To find good potential host in new york based on the desity of turist/people looking for a temporary place to stay in new york to <b>increase revenue and increase amount host and visitors in 2022</b>
 
-5. **Student dilarang untuk melakukan scraping dataset** karena dikhawatirkan proses pembuatan scraper dan proses scraping akan memakan waktu. Gunakan public dataset yang tersedia diberbagai macam situs Internet.
+### Measure: 
+increase revenue by 20% as well as increasing the amount of host and visitors by up to 20% (total booking)
 
-### Data Sources
-Student dapat memilih dataset dari salah satu repository dibawah ini. Popular open data repositories :
+reason why 20% is chosen is because that is the ideal revenue percentage to reach and booking percentage is increased by 20% which is a reasonable increase from the currently low percentage.
 
-- [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
-- [Kaggle datasets](https://www.kaggle.com/datasets)
-- [Amazon’s AWS datasets](https://registry.opendata.aws/)
+### Achivable:
+To Achive the Speific goal with the measure above we have to :
 
-Meta portals :
+- Analyze the market trend from past data, in new york city.
 
-- [Data Portals](http://dataportals.org/)
-- [OpenDataMonitor](https://opendatamonitor.eu/frontend/web/index.php?r=dashboard%2Findex)
-- [Quandl](https://www.quandl.com/)
-- Sumber lain yang kredibel.
+- Pin pointing visitor intrest in which time and part of new york they tend to stay.
 
----
+- finding the corelation between the price and the location of the stay.
 
-## Conceptual Problems
+### Relevant:
+Based on the achivable list each list are relevant to reaching our specific goals:
 
-*Jawab pertanyaan berikut:*
+- If we are able to analyze the market trend we can find insight in marketing our platform.
 
-1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+- If we can find out on which month and which area the visitor tend to stay, we can market our platform to potential host in that area in the year 2022 and that month in 2022.
 
-2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+- if we can find out the corelation between price and the location of the stay we can see area that are profittable to market out platform.
 
-3. Jelaskan apa yang dimaksud dengan Cross Validation !
+### Time-Bound:
+The goal is set to for the nect 4 months:
 
----
+- 1 month will be to analyze the data that we have gathered.
+- 1.5 month will be used to create an ad campaign for potential host and potential visitors.
+- 1 month will be used to execute the project.
+- 2 weeks to analyze the result after on month of execution
 
-## Assignment Instructions
-
-Milestones 2 dikerjakan dalam format ***notebook*** dan ***Model Deployment*** dengan beberapa *kriteria wajib* di bawah ini:
-
-1. Machine learning framework yang digunakan adalah *Scikit-Learn*.
-
-2. Ada penggunaan library visualisasi, seperti *matplotlib*, *seaborn*, atau yang lain.
-
-3. Isi *notebook* harus mengikuti *outline* di bawah ini:
-   1. Perkenalan
-      > Bab pengenalan harus diisi dengan identitas, gambaran besar dataset yang digunakan, dan *objective* yang ingin dicapai.
-   
-   2. Import Libraries
-      > *Cell* pertama pada *notebook* **harus berisi dan hanya berisi** semua *library* yang digunakan dalam *project*.
-   
-   3. Data Loading
-      > Bagian ini berisi proses penyiapan data sebelum dilakukan eksplorasi data lebih lanjut. Proses Data Loading dapat berupa memberi nama baru untuk setiap kolom, mengecek ukuran dataset, dll.
-   
-   4. Exploratory Data Analysis (EDA)
-      > Bagian ini berisi explorasi data pada dataset diatas dengan menggunakan query, grouping, visualisasi sederhana, dan lain sebagainya.
-   
-   5. Feature Engineering
-      > Bagian ini berisi proses penyiapan data untuk proses pelatihan model, seperti pembagian data menjadi train-test, transformasi data (normalisasi, encoding, dll.), dan proses-proses lain yang dibutuhkan.   
-   
-   6. Model Definition
-      > Bagian ini berisi cell untuk mendefinisikan model. Jelaskan alasan menggunakan suatu algoritma/model, hyperparameter yang dipakai, jenis penggunaan metrics yang dipakai, dan hal lain yang terkait dengan model.
-
-   7. Model Training
-      > Cell pada bagian ini hanya berisi code untuk melatih model dan output yang dihasilkan. Lakukan beberapa kali proses training dengan hyperparameter yang berbeda untuk melihat hasil yang didapatkan. Analisis dan narasikan hasil ini pada bagian Model Evaluation.
-   
-   8. Model Evaluation
-      > Pada bagian ini, dilakukan evaluasi model yang harus menunjukkan bagaimana performa model berdasarkan metrics yang dipilih. Hal ini harus dibuktikan dengan visualisasi tren performa dan/atau tingkat kesalahan model. **Lakukan analisis terkait dengan hasil pada model dan tuliskan hasil analisisnya**.
-
-   9. Model Saving
-      > Pada bagian ini, dilakukan proses penyimpanan model dan file-file lain yang terkait dengan hasil proses pembuatan model. **Dengan melihat hasil Model Evaluation, pilihlah satu model terbaik untuk disimpan. Model terbaik ini akan digunakan kembali dalam melakukan Model Inference dan Model Deployment.**
-   
-   10. Model Inference
-       > Model yang sudah dilatih akan dicoba pada data yang bukan termasuk ke dalam train-set ataupun test-set. Data ini harus dalam format yang asli, bukan data yang sudah di-scaled. Gunakan model terbaik berdasarkan hasil Model Evaluation. Notebook Model Inference haruslah berbeda dengan notebook saat pembuatan model dilakukan.
-   
-   11. Pengambilan Kesimpulan
-       > Pada bagian terakhir ini, **harus berisi** kesimpulan yang mencerminkan hasil yang didapat dengan *objective* yang sudah ditulis di bagian pengenalan.
-
-4. Notebook harus diupload dalam akun GitHub masing-masing student untuk selanjutnya dinilai.
+### Problem Statement:
+To improve revenue by 20% and increase our host and visitors by up to 20% (total booking) within 4 months, by increasing numbers of host and visitors by marketing potential host in that area and time and marketing them on our platform to potential visitors.
 
 ---
 
-## Assignment Submission
+# Data Cleaning and Preprocessing
 
-- Simpan assignment pada sesi ini dengan nama :
-  * Modeling : `P1M2_<nama-student>.ipynb`, misal `P1M2_raka_ardhi.ipynb`.
-  * Model Inference : `P1M2_<nama-student>_inf.ipynb`, misal `P1M2_raka_ardhi_inf.ipynb`.
-
-- Push Assigment yang telah Anda buat ke akun Github Classroom Anda masing-masing.
-
-- Untuk Model Deployment :
-  * Buat sebuah folder bernama `deployment` dan masukkan semua file yang berkaitan dengan deployment ke folder ini.
-  * Buat sebuah file bernama `url.txt` yang berisi URL Dataset dan URL deployment.
-  * Contoh bentuk isi repository dengan Model Deployment.
-    ```
-    ├── deployment/
-    │   ├── app.py
-    │   └── eda.py
-    │   └── prediction.py
-    │   └── model.pkl
-    ├── P1M2_raka_ardhi.ipynb
-    ├── P1M2_raka_ardhi_inf.ipynb
-    ├── url.txt
-    └── README.md
-    ```
----
-
-## Assignment Rubrics
-
-### Code Review
-
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Feature Engineering | Mampu melakukan preprocessing dataset sebelum melakukan proses modeling (split data, normalisasi, encoding, dll) | 35 pts |
-| KNN | Mengimplementasikan algoritma KNN pada domain kasus yang dipilih  | 5 pts |
-| SVM | Mengimplementasikan algoritma SVM pada domain kasus yang dipilih  | 5 pts |
-| Decision Tree | Mengimplementasikan algoritma Decision Tree pada domain kasus yang dipilih  | 5 pts |
-| Random Forest | Mengimplementasikan algoritma Random Forest pada domain kasus yang dipilih  | 5 pts |
-| Boosting | Mengimplementasikan salah satu algoritma Boosting pada domain kasus yang dipilih  | 5 pts |
-| Pipelines | Mengimplementasikan Pipeline pada domain kasus yang dipilih | 20 pts |
-| Cross Validation | Mengimplementasikan Cross Validation dengan Scikit-Learn | 25 pts |
-| Hyperparameter Tuning | Mengimplementasikan Hyperparameter Tuning dengan Scikit-Learn | 20 pts |
-| Model Inference | Mencoba model yang telah dibuat dengan data baru | 10 pts |
-| Runs Perfectly | Kode berjalan tanpa ada error. Seluruh kode berfungsi dan dibuat dengan benar. | 10 pts |
-
-```
-Pada rubrik Milestone 2 diatas terdapat point Cross Validation dan Hyperparameter Tuning (GridSearchCV, RandomSearchCV, dll). 
-Kedua hal yang dimaksud ini adalah dua hal yang berbeda bukan satu kesatuan. Petunjuk : 
-
-1. Lakukan model training dengan menggunakan parameter default (baseline model) dari setiap algoritma yang diminta.
-2. Kemudian, gunakan `cross_val_score` atau `cross_validate` untuk mencari nilai performansi `mean` dan `std` dari setiap model. 
-3. Pilih agoritma yang terbaik dari hasil poin 2.
-4. Lakukan Hyperparameter Tuning pada algoritma terbaik (berdasarkan poin 2) dengan menggunakan GridSearchCV, RandomSearchCV, dll.
-5. Bandingkan performansi antara sebelum dan sesudah dilakukan Hyperparameter Tuning.
-```
-
-### Concepts
-
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Classifications | Mampu menjawab pertanyaan dengan singkat, jelas, dan padat serta sesuai dengan konsep dan logika yang ada mengenai Conceptual Problems (10 pts each) | 30 pts |
-
-### Readability
-
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Tertata Dengan Baik | Semua baris kode terdokumentasi dengan baik dengan Markdown untuk penjelasan kode | 15 pts |
-
-```
-Kriteria tertata dengan baik diantaranya adalah: 
-
-1. Terdapat section Perkenalan yang jelas dan lengkap terkait masalah dan latar belakang masalah yang akan diselesaikan.
-2. Tidak menyalin markdown dari tugas lain.
-3. Import library rapih (terdapat dalam 1 cell dan tidak ada unused libs).
-4. Pemakaian fungsi markdown yang optimal (Heading, text formating, dll).
-5. Terdapat komentar pada setiap baris kode.
-6. Adanya pemisah yang jelas antar section, dll.
-7. Tidak adanya typo.
-```
-
-### Analysis
-
-| Criteria | Meet Expectations | Points|
-| --- | --- | --- |
-| Model Analysis | Menganalisa informasi dari model yang telah dibuat | 35 pts |
-| Overall Analysis | Menarik informasi/kesimpulan dari keseluruhan kegiatan yang dilakukan | 20 pts |
-
-```
-Contoh kriteria analisa yang baik diantaranya adalah: 
-
-1. Terdapat penjelasan macam-macam hasil metric evaluasi dan interpretasinya terhadap kasus yang diselesaikan.
-2. Dapat menjelaskan KELEBIHAN dan KELEMAHAN dari model yang dibuat DENGAN KAITANNYA DENGAN DOMAIN BUSINESS YANG DIHADAPI yang dibuktikan dengan eksplorasi sederhana (grafik, plot, teori, dll).
-3. Dapat memberikan statement untuk improvement selanjutnya dari model yang dibuat. 
-4. Dapat menyebutkan insight yang dapat diambil setelah proses EDA, dll.
-```
-
-### Model Deployment
-
-| Criteria | Meet Expectations | Points |
-| --- | --- | --- |
-| Model Deployment | Membuat webapps terhadap project yang telah dibuat. | 15 pts |
-
-```
-Catatan mengenai Model Deployment : 
-
-1. Ketiadaan URL deployment ataupun source code deployment di repository, akan tetap diperhitungkan untuk menilai bagian Model Deployment. 
-2. Tidak diperkenankan adanya informasi tambahan/informasi susulan seperti lupa memberikan URL deployment atau lupa mengupload source code via apapun (DM buddy, email, atau yang lain).
-3. Student akan dianggap tidak melakukan Model Deployment jika tidak ada URL deployment dan source code deployment di repository.
-```
+The raw data was cleaned to ensure it is appropriate for statistical measurements. This involved adjusting data types and removing rows with missing values as well as outlier handling based on skewness and kurtosis analysis.
 
 ---
 
-```
-Total Points : 260
+# Data Analysis and Insights
 
-Catatan : Penilaian Milestone 2 juga dapat dipengaruhi oleh aktivitas student selama Phase 1 berlangsung, baik sesi kelas maupun sesi mentoring dengan buddy-nya masing-masing sehingga terdapat kemungkinan adanya penambahan atau pengurangan nilai diluar rubric yang telah disebutkan diatas.
-```
+Based on the analysis above we can gather that.
+
+- The area with the most potential for marketing to potential host is the Manhattan and Brooklyn due to the fact it has the highest price.
+
+- Based on the month distribution we can see that June is the most popular month people book rooms in air bnb, we can market visitors for that specific month.
+
+- Since entire house/apartments are the more popular we can market potential visitors to the area of manhattan/Brooklyn with entire house/apartments host.
+
+- based on the distribution of neighborhood groups manhattan has the highest number of listing, Manhattan is the most popular, although we can also opt for Brooklyn to take initiative for to find potential host there because it seems to be growing in popularity, which we can plan a marketing strategy based on that.
+
+- we can see based on the distribution of price most host tend to price their rooms around 60 - 69 USD so we can set out price range in order to attract more potential visitors.
+
+- based on the anova test we can gather that there is a big difference between the price and the locations, although Brooklyn has the most number of host, manhattan has the highest price. the ANOVA test can also be seen by the tree map, where the smallest weight being Stanen Island being the cheapest place. but it also has the most reviews although we cannot determind if it is positive or negative, we can assume it is not a good potential marketing area to find potential host. <b>on the other hand we can also focus on building a a potential good area in staten island in the future, becuase currently we are not in the situation to do so we will save that option for later</b>
+
+- Key point in the data:
+
+  - Manhattan is the best place to market with the highest price.
+  - Brooklyn is the most dense area with many potential host and a growing popularity, we can also market our service to Brooklyn.
+  - June being the most popular time to stay in New York we could mareket to the visitors a month before.
+  - We can also focus on building a a potential good area in staten island for future projects.
+  
 
 ---
 
-## Notes
+# Tableu Dashboard Link
 
-* **Deadline : P1W4D4 pukul 18:00 WIB.**
-
-* **Keterlambatan pengumpulan tugas mengakibatkan skor Milestone 2 menjadi 0.**
+LINK Tableu:
+https://public.tableau.com/app/profile/irsyad.rafif/viz/Milestone1_17073802602180/AirbnbMilestone?publish=yes
